@@ -33,6 +33,9 @@ class Sheep:
         
         # sheep can walk randomly
         move = 10
+        if self.colour == PURPLE:
+            move = 15
+            
         self.x += random(-move, move)
         self.y += random(-move, move)
         fill(255)
@@ -68,16 +71,19 @@ class Grass:
         self.y = y
         self.sz = sz
         self.eaten = False
-        self.energy = 5        
+        self.energy = 2       
         
     def update(self):
-        
-        if self.eaten:
-            fill(BROWN)
-        else:
+       if self.eaten:
+           if random(100) < 5:
+               fill(GREEN)
+               self.eaten = False
+           else:
+                fill(BROWN)
+       else:
             fill(GREEN)
             
-        rect(self.x, self.y, self.sz, self.sz)
+       rect(self.x, self.y, self.sz, self.sz)
         
         
 grassList = []    
