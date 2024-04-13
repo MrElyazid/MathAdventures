@@ -1,10 +1,10 @@
 import random
 
 letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ,?!. "
-target = "wa dima raja"
+target = "ruy lopez for life"
 score = 0
 guess = []
-
+counter = 0
 
 guess = [random.choice(letters) for _ in range(len(target))]
 
@@ -30,6 +30,8 @@ def update_score_indices(target, guess):
 while score != len(target):
     score, indices = update_score_indices(target, guess)
     mutate(guess, indices)
-    print("".join(guess))  
+    print("".join(guess)) 
+    counter += 1 
 
 print("Final guess:", "".join(guess))
+print("number of trials : ", counter)
