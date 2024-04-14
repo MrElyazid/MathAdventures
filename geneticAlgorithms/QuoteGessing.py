@@ -1,7 +1,7 @@
 import random
 
 letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ,?!. "
-target = "ruy lopez for life"
+target = "ruy lopez for life, London system for noobs!"
 score = 0
 guess = []
 counter = 0
@@ -32,6 +32,8 @@ while score != len(target):
     mutate(guess, indices)
     print("".join(guess)) 
     counter += 1 
+
+
 
 print("Final guess:", "".join(guess))
 print("number of trials : ", counter)
