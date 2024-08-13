@@ -1,0 +1,1 @@
+### A repository for the code found in the book [Math Adventures With Python](https://www.google.co.ma/books/edition/Math_Adventures_with_Python/S1v6DwAAQBAJ?hl=en&gbpv=0) and some other animations using Processing Python mode
